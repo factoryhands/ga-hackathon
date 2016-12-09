@@ -8,4 +8,6 @@ Used Google maps API, Snazzymaps and the bootstrap framework.
 
 Derek Robertson, Alicia Shupe, Sean Robertson, Tarryn Lambert, Daniel Naylor, Anjie Kanable
 
+[Assemble]https://factoryhands.github.io/ga-hackathon
+
 ![](img/screenshot.png?raw=true)
