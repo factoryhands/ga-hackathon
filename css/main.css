@@ -33,6 +33,11 @@ no-margin {
     margin: 1em 0px 0 1em;
 }
 
+.navbar-brand {
+	font-size: 2em;
+	font-weight: 900;
+}
+
 
 
 
