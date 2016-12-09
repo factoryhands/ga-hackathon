@@ -4,4 +4,6 @@
 
 ## Used Google maps API, Snazzymaps and the bootstrap framework.
 
+##Team members: Derek Robertson, Alicia Shupe, Sean Robertson, Tarryn Lambert, Daniel Naylor, Anjie Kanable
+
 ![](img/screenshot.png?raw=true)
