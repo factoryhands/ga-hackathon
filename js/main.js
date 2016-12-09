@@ -14,9 +14,16 @@ if (document.getElementById('map-canvas')){
     // Attach a map to the DOM Element, with the defined settings
     var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
 
-    // // Request to put map pointer on map
-    // $.ajax({
-    // 	url:"https://data.seattle.gov/resource/4xy5-26gy.json",
-    // 	method:
-    // });
+    var marker = new google.maps.Marker({
+       position: myLatlng,
+       map: map
+    });
+
+    //loops through data and finds specific node
+
+    //loops through and finds lat:long data of map
+
+    //puts markers on map
+
+    //
 }
