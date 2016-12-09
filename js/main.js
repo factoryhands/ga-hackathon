@@ -28,9 +28,13 @@ function initMap() {
         var mapOptions = {
             zoom: 14,
             center: myLatlng,
+            zoomControl: true,
+            mapTypeControl: false,
+            zoomControlOptions: {
+            position: google.maps.ControlPosition.LEFT_CENTER
+          },
             // mapTypeId: google.maps.MapTypeId.ROADMAP
             styles: [
-                        
     {
         "featureType": "all",
         "elementType": "geometry.stroke",
@@ -204,7 +208,7 @@ function initMap() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#E60003"
+                "color": "#ffed00"
             }
         ]
     },
@@ -222,7 +226,7 @@ function initMap() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#D41C1D"
+                "color": "#002fa7"
             }
         ]
     },
@@ -231,7 +235,7 @@ function initMap() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#002FA7"
+                "color": "#E9F8DA"
             }
         ]
     },
@@ -240,7 +244,7 @@ function initMap() {
         "elementType": "geometry.fill",
         "stylers": [
             {
-                "color": "#BF0000"
+                "color": "#002fa7"
             }
         ]
     },
@@ -380,6 +384,7 @@ function initMap() {
         var markers = [];
 
         function placeMarker(filter){
+            var icon = 'img/map_marker.png';
             for(var i = 0; i < markers.length; i++) {
                 markers[i].setMap(null);
             }
@@ -393,6 +398,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(sculpture[i].latitude,sculpture[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -405,6 +411,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(structure[i].latitude,structure[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -417,6 +424,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(photographs[i].latitude,photographs[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -429,6 +437,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(paintings[i].latitude,paintings[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -441,6 +450,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(mosaic[i].latitude,mosaic[i].longitude); 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -453,6 +463,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(mixedMedia[i].latitude,mixedMedia[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -465,6 +476,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(installation[i].latitude,installation[i].longitude); 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -477,6 +489,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(infrastructure[i].latitude,infrastructure[i].longitude); 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -489,6 +502,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(enviroments[i].latitude,enviroments[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -501,6 +515,7 @@ function initMap() {
                             var myLatlng = new google.maps.LatLng(bronze[i].latitude,bronze[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 
@@ -514,6 +529,7 @@ function initMap() {
 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
+                               icon: icon,
                                map: map
                             });
 

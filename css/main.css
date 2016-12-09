@@ -57,6 +57,10 @@ no-margin {
 	border-color: #3c3c3c;
 }
 
+.navbar-inverse .navbar-brand {
+    color: #ffed00;
+}
+
 
 
 
