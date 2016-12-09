@@ -38,6 +38,25 @@ no-margin {
 	font-weight: 900;
 }
 
+.btn {
+	background-color: #fff;
+    background-image: none;
+    color: #3c3c3c;
+    border-color: #3c3c3c;
+    border-width: 4px;
+    font-weight: bold;
+}
+
+.btn:hover {
+	background-color: #3c3c3c;
+	border-color: #3c3c3c;
+}
+
+.open>.dropdown-toggle.btn-primary {
+	background-color: #3c3c3c;
+	border-color: #3c3c3c;
+}
+
 
 
 

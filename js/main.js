@@ -9,6 +9,7 @@
 
 function initMap() {
     console.log( "ready!" );
+    console.log(google.maps)
 
     var filter = '';
 
@@ -27,7 +28,277 @@ function initMap() {
         var mapOptions = {
             zoom: 14,
             center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            // mapTypeId: google.maps.MapTypeId.ROADMAP
+            styles: [
+                        
+    {
+        "featureType": "all",
+        "elementType": "geometry.stroke",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "all",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            },
+            {
+                "weight": "3.36"
+            },
+            {
+                "color": "#898989"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative",
+        "elementType": "labels.text.stroke",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.country",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.province",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.locality",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.neighborhood",
+        "elementType": "labels.icon",
+        "stylers": [
+            {
+                "visibility": "on"
+            }
+        ]
+    },
+    {
+        "featureType": "administrative.land_parcel",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#FBFCF4"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "landscape.natural",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.attraction",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#E60003"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.business",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#FFED00"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.government",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#D41C1D"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.park",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#002FA7"
+            }
+        ]
+    },
+    {
+        "featureType": "poi.school",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#BF0000"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#0F0919"
+            }
+        ]
+    },
+    {
+        "featureType": "road",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "off"
+            }
+        ]
+    },
+    {
+        "featureType": "transit.line",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "saturation": -100
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "geometry.fill",
+        "stylers": [
+            {
+                "color": "#E4F7F7"
+            }
+        ]
+    },
+    {
+        "featureType": "water",
+        "elementType": "labels.text",
+        "stylers": [
+            {
+                "visibility": "simplified"
+            }
+        ]
+    }
+]
         };
      
         // Attach a map to the DOM Element, with the defined settings
@@ -55,7 +326,7 @@ function initMap() {
                     // console.log('success', res);
                     items = res;
                     for(var i = 0; i < items.length; i++){
-                        console.log("items", items[i].classification);
+                        //console.log("items", items[i].classification);
                         switch(items[i].classification){
                             case "Sculpture":
                                 sculpture.push(items[i]);
@@ -92,7 +363,7 @@ function initMap() {
                                 break;
                         }
                     }
-                    console.log('sculpture', sculpture);
+                    //console.log('sculpture', sculpture);
                     //placeMarker();
 
                 }, 
@@ -106,99 +377,138 @@ function initMap() {
             
         }
 
+        var markers = [];
+
         function placeMarker(filter){
+            for(var i = 0; i < markers.length; i++) {
+                markers[i].setMap(null);
+            }
+            markers = [];
+
+
             switch(filter.toLowerCase()){
                     case "sculpture":
+                            //markers = sculpture;
                         for(var i = 0; i < sculpture.length; i++){
                             var myLatlng = new google.maps.LatLng(sculpture[i].latitude,sculpture[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
-                            });                            
+                            });
+
+                            markers.push(marker);                            
                         }
                         break;
                     case "structure":
+                            //markers = structure; 
                         for(var i = 0; i < structure.length; i++){
                             var myLatlng = new google.maps.LatLng(structure[i].latitude,structure[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "photographs":
+                            //markers = photographs;
                         for(var i = 0; i < photographs.length; i++){
                             var myLatlng = new google.maps.LatLng(photographs[i].latitude,photographs[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "paintings":
+                            //markers = paintings;
                         for(var i = 0; i < paintings.length; i++){
                             var myLatlng = new google.maps.LatLng(paintings[i].latitude,paintings[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "mosaic":
+                            //markers = mosaic;
                         for(var i = 0; i < mosaic.length; i++){
                             var myLatlng = new google.maps.LatLng(mosaic[i].latitude,mosaic[i].longitude); 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "mixed media":
+                            //markers = mixedMedia;
                         for(var i = 0; i < mixedMedia.length; i++){
                             var myLatlng = new google.maps.LatLng(mixedMedia[i].latitude,mixedMedia[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "installation":
+                            //markers = installation;
                         for(var i = 0; i < installation.length; i++){
                             var myLatlng = new google.maps.LatLng(installation[i].latitude,installation[i].longitude); 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "infrastructure":
+                            //markers = infrastructure;
                         for(var i = 0; i < infrastructure.length; i++){
                             var myLatlng = new google.maps.LatLng(infrastructure[i].latitude,infrastructure[i].longitude); 
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "enviroments":
+                            //markers = enviroments;
                         for(var i = 0; i < enviroments.length; i++){
                             var myLatlng = new google.maps.LatLng(enviroments[i].latitude,enviroments[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                     case "bronze":
+                            //markers = bronze;
                         for(var i = 0; i < bronze.length; i++){
                             var myLatlng = new google.maps.LatLng(bronze[i].latitude,bronze[i].longitude);
                             var marker = new google.maps.Marker({
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
-                    case "twoD":
+                    case "2d":
+                            //markers = twoD;
                         for(var i = 0; i < twoD.length; i++){
                             var myLatlng = new google.maps.LatLng(twoD[i].latitude,twoD[i].longitude);
 
@@ -206,9 +516,21 @@ function initMap() {
                                position: myLatlng,
                                map: map
                             });
+
+                            markers.push(marker);
                         }
                         break;
                 }
+                // for(var i = 0; i < markers.length; i++){
+                //     var myLatlng = new google.maps.LatLng(markers[i].latitude,markers[i].longitude);
+
+                //     var marker = new google.maps.Marker({
+                //        position: myLatlng,
+                //        map: map
+                //     });
+
+                //     markers[i] = marker;
+                // }
             
         }
 
