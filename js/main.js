@@ -10,7 +10,8 @@ $( document ).ready(function() {
         var mapOptions = {
             zoom: 14,
             center: myLatlng,
-            mapTypeId: google.maps.MapTypeId.ROADMAP
+            // mapTypeId: google.maps.MapTypeId.ROADMAP
+            styles: [{"featureType":"landscape.natural","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"color":"#e0efef"}]},{"featureType":"poi","elementType":"geometry.fill","stylers":[{"visibility":"on"},{"hue":"#1900ff"},{"color":"#C5E6E2"}]},{"featureType":"road","elementType":"geometry","stylers":[{"lightness":100},{"visibility":"simplified"}]},{"featureType":"road","elementType":"labels","stylers":[{"visibility":"off"}]},{"featureType":"transit.line","elementType":"geometry","stylers":[{"visibility":"on"},{"lightness":700}]},{"featureType":"water","elementType":"all","stylers":[{"color":"#8ED0BC"}]}]
         };
      
         // Attach a map to the DOM Element, with the defined settings
